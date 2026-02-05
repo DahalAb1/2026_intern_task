@@ -1,133 +1,122 @@
-# Summer 2026 Internship Technical Assessment
+# Summer 2026 Internship — Technical Assessment
 
-Hello! This small assessment is designed to evaluate your analytical and coding skills. Please choose one of the two tasks to tackle. We designed a test as a realistic representation of the work - if you like it, you'll do well, and you'll like working with us (hopefully!). Please don't spend more than 3-4 hours on this :) Please keep this test confidential and do not distribute. 
+Welcome! This assessment evaluates your analytical and coding skills through a realistic sample of the work we do. Pick one of the two tasks below, spend 3–4 hours max, and show us how you think.
+
+If you enjoy this, you'll enjoy working with us.
+
+**Please keep this assessment confidential.**
 
 ---
 
-## Before You Begin: Logistics Questions
+## Logistics Questions
 
-**Please include your answers to the following questions at the beginning of your report:**
+Include your answers at the beginning of your report:
 
-1. **Availability**: When can you start the internship?
-2. **Short-term visa**: Do you need a US visa for short-term work (summer internship)?
-3. **Full-time interest**: Are you able/interested to work full-time after the internship?
-4. **Full-time visa**: Would you need visa sponsorship for a full-time role?
-5. **Compensation**: What is your expected compensation for this internship?
-6. **Anything else**: Is there anything else we should know about you?
-7. feedback for us on the tasks / anything else? 
+1. When can you start?
+2. Do you need a US visa for a summer internship?
+3. Interested in full-time after the internship?
+4. Would you need visa sponsorship for full-time?
+5. Expected compensation?
+6. Anything else we should know?
+7. Feedback on this assessment?
 
 ---
 
 ## Overview
 
-You are provided with two synthetic datasets:
-- **Electricity price data**: Hourly futures and spot prices (1 year)
-- **Temperature data**: Daily temperature (10 years)
+You have two synthetic datasets:
 
-Choose **one** of the two tasks below (or attempt both if you wish, but completing one well is sufficient).
+| Dataset | Contents |
+|---------|----------|
+| `electricity_prices.csv` | Hourly futures & spot prices (1 year) |
+| `temperature.csv` | Daily temperature (10 years) |
+
+Pick **one** task. Doing both is optional.
 
 ---
 
-## Data Description
+## Data
 
-### 1. Electricity Price Data (`electricity_prices.csv`)
+### Electricity Prices
 
 | Column | Description |
 |--------|-------------|
 | `datetime` | Timestamp |
-| `futures_price` | Futures price ($/MWh) — known one day ahead |
-| `spot_price` | Spot price ($/MWh) — actual settlement price |
+| `futures_price` | Price known one day ahead ($/MWh) |
+| `spot_price` | Actual settlement price ($/MWh) |
 
-This is a **next-day trading** setup: trades are submitted one day ahead based on the futures price, and settle at the spot price.
+Trades are submitted one day ahead at the futures price and settle at the spot price.
 
-### 2. Temperature Data (`temperature.csv`)
+### Temperature
 
 | Column | Description |
 |--------|-------------|
 | `date` | Date (YYYY-MM-DD) |
-| `temp_c` | Daily average temperature (Celsius) |
+| `temp_c` | Daily average temperature (°C) |
 
-Weather affects electricity demand and prices.
-
----
-
-## Task 1: Electricity Futures Trading Strategy
-
-### Objective
-Design and backtest a trading strategy for next-day electricity trading.
-
-### Requirements
-
-1. **Strategy design**: Develop a trading strategy — spread trading, trend following, mean reversion, or any approach you can justify.
-
-2. **Backtest**: Implement and evaluate on out-of-sample data. Report total return, Sharpe ratio, and any other relevant metrics.
-
-3. **Discussion**: Briefly discuss your backtesting setup, limitations, and assumptions.
-
-### Hints
-- Weather affects electricity prices
-- Consider seasonality and time-of-day patterns
-- You can ignore transaction costs 
+Weather drives electricity demand.
 
 ---
 
-## Task 2: Weather Pattern Analysis & Cold Winter Prediction
+## Task 1: Trading Strategy
 
-### Objective
-Analyze temperature patterns and build a model to predict cold winter days.
+**Goal**: Design and backtest a trading strategy for next-day electricity.
 
-**We've deliberately left this open-ended** — we want you to creatively curate your own project. Define your own target, choose your own approach, and tell us a compelling story with the data.
+**Requirements**:
+- Build a strategy (spread, trend, mean-reversion, or your own idea)
+- Backtest on out-of-sample data
+- Report return, Sharpe ratio, and relevant metrics
+- Discuss setup, assumptions, and limitations
 
-### Suggested Direction
+**Hints** (optional):
+- Weather affects prices
+- Seasonality and intraday patterns exist
+- You can ignore transaction costs
 
-1. **Explore**: Has temperature volatility changed over the 10-year period?
+---
 
-2. **Predict**: Build a model to predict cold winter days.
-   - **Constraint**: Only use data from 6+ months prior (e.g., predict November using data up to May)
-   - **Define your own target** — for example: "days below 0°C in November", "cold spells lasting 5+ days", or something else entirely
+## Task 2: Weather Prediction
 
-3. **Evaluate**: How well does your model work? What are its limitations?
+**Goal**: Analyze temperature patterns and predict cold winter days.
 
-We're excited to see what you come up with!
+This one's intentionally open-ended — define your own target, pick your approach, and tell a compelling story.
+
+**Suggested direction**:
+1. **Explore**: Has temperature volatility changed over 10 years?
+2. **Predict**: Build a model for cold winter days
+   - Constraint: Only use data from 6+ months prior
+   - Define your target (e.g., "days below 0°C in November", "cold spells lasting 5+ days")
+3. **Evaluate**: How well does it work? What are the limitations?
+
+We're curious to see what you build.
 
 ---
 
 ## Deliverables
 
-Please submit the following:
+### Report
+- PDF or Markdown, **5 pages max** (appendix doesn't count)
+- Include: logistics answers, executive summary, methodology, results, limitations
+- **AI disclosure**: Feel free to use AI tools — just tell us how
 
-### 1. Report (PDF or Markdown)
-- **Maximum 5 pages** (excluding appendix)
-- Structure (for example):
-  1. Logistics answers (from the questions above)
-  2. Executive summary (1 paragraph)
-  3. Approach and methodology
-  4. Results and evaluation
-  5. Limitations and future improvements
-  6. **AI tools disclosure**: You are welcome to use any AI tools — we want to understand your workflow 
+### Code
+- Jupyter notebook or Python scripts
+- Runnable and commented
+- Brief instructions if needed
 
-### 2. Code
-- Jupyter notebook (.ipynb) or Python scripts (.py)
-- Code should be runnable and well-commented
-- Include a brief explanation if necessary of how to run your code
-
-### 3. Appendix (optional)
-- Additional visualizations
-- Extended analysis
-- Any supporting material
+### Appendix (optional)
+- Extra visualizations or analysis
 
 ---
 
 ## Submission
 
-Please submit your report and code to [INSERT EMAIL/LINK].
+Send your report and code to **cynthia@meteorologica.com**.
 
-**Deadline**: [INSERT DEADLINE]
+**Deadline**: Rolling basis — no fixed deadline, we review as submissions come in.
+
+Questions? Email **cynthia@meteorologica.com**.
 
 ---
 
-## Questions?
-
-If you have clarifying questions about the task, please email [INSERT CONTACT].
-
-Good luck!
+Good luck — we're looking forward to seeing your work.

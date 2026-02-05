@@ -22,3 +22,6 @@ env/
 rubric.md
 DATA_README.md
 prepare_data.py
+
+# Explicitly include data files (override any parent .gitignore)
+!data/*.csv
