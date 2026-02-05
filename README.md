@@ -115,8 +115,6 @@ Send your report and code to **cynthia@meteorologica.com**.
 
 **Deadline**: Rolling basis — no fixed deadline, we review as submissions come in.
 
-Questions? Email **cynthia@meteorologica.com**.
-
 ---
 
 Good luck — we're looking forward to seeing your work.
